@@ -10,9 +10,11 @@ export class AppComponent {
   title:String;
   values;
   queryString:String;
+  stringValues;
   constructor(){
     this.title='Test filter';
     this.values = [];
+    this.stringValues = [];
      let stops = [
       {
         name:"Stop 1",
@@ -40,8 +42,11 @@ export class AppComponent {
         ]
       }
     ];
-    for(let i=0;i<1000;i++){
+    for(let i=0;i<100;i++){
       this.values.push.apply(this.values,stops);
+    }
+    for(let i=0;i<this.values.length;i++){
+      this.stringValues.push(JSON.stringify(this.values[i]).toLowerCase());
     }
   }
 }
