@@ -9,6 +9,7 @@ import {FilterPipe} from './filter-pipe.pipe'
 export class AppComponent {
   title:String;
   values;
+  queryString:String;
   constructor(){
     this.title='Test filter';
     this.values = [];
