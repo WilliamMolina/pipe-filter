@@ -4,7 +4,7 @@
 
   <ul>
     <li *ngFor="let stop of values | filter: queryString : stringValues">
-      <b>{{stop.name}} : </b> <i *ngFor="let n of stop.near">{{n}},</i>
+      <b>{{stop.stopName}}</b>
     </li>
   </ul>
 </div>
